@@ -12,10 +12,15 @@
   .gradient {
     @apply bg-gradient-to-r from-white/40 to-white;
   }
+
+  .navLink {
+    @apply relative before:absolute before:-bottom-1 before:bg-secondaryColor before:hidden  before:h-1 before:w-full  group-hover:text-secondaryColor group-hover:before:block;
+  }
 }
 
 body {
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
   min-height: 100vh;
+  overflow-x: hidden;
 }

@@ -1,24 +1,86 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
+import React, { useState } from 'react';
 
 const NavBar = () => {
+  const [navShown, setNavShown] = useState(false);
   return (
     <header className='border-b border-blackBasic/20 bg-green/10 py-4'>
-      <div className='container mx-auto flex justify-between items-center'>
+      <div className='container mx-auto flex justify-between items-center px-3 lg:px-0'>
         {/* Header Logo */}
-        <Image src='/logo.png' width={147} height={50} alt='Brand Logo' />
+        <Image
+          src='/logo.png'
+          width={147}
+          height={50}
+          alt='Brand Logo'
+          className='w-[100px] h-auto lg:w-[147px]'
+        />
 
-        <div className='flex items-center gap-[100px]'>
-          {/* Nav Items */}
-          <nav>
-            <ul>
-              <li className='flex items-center text-blackBasic gap-[70px] text-lg leading-9'>
+        {/* Only Show on small screen */}
+        {/* Menu button */}
+        <div onClick={() => setNavShown(!navShown)} className='lg:hidden'>
+          <div>
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              fill='none'
+              viewBox='0 0 24 24'
+              strokeWidth={1.5}
+              stroke='currentColor'
+              className='w-6 h-6'
+            >
+              <path
+                strokeLinecap='round'
+                strokeLinejoin='round'
+                d='M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5'
+              />
+            </svg>
+          </div>
+        </div>
+
+        {/* Mobile menu */}
+        {/* {navShown && (
+          <nav className='absolute right-0 bg-primaryColor text-white h-full w-4/6'>
+            <ul className='flex flex-col items-center gap-3 py-3 lg:hidden'>
+              <li className='group transition-all'>
                 <Link href='/'>Home</Link>
+              </li>
+              <li className='group transition-all'>
                 <Link href='/'>Blog</Link>
+              </li>
+              <li className='group transition-all'>
                 <Link href='/'>About us</Link>
+              </li>
+              <li className='group transition-all'>
+                <Link href='/'>Login</Link>
+              </li>
+            </ul>
+          </nav>
+        )} */}
+
+        <div className=' hidden lg:flex items-center gap-[100px]'>
+          {/* Only show on large screen */}
+          <nav>
+            <ul className='flex items-center text-blackBasic transition-all gap-[70px] text-lg leading-9'>
+              <li className='group transition-all'>
+                <Link href='/' className='navLink'>
+                  Home
+                </Link>
+              </li>
+              <li className='group transition-all'>
+                <Link href='/' className='navLink'>
+                  Blog
+                </Link>
+              </li>
+              <li className='group transition-all'>
+                <Link href='/' className='navLink'>
+                  About us
+                </Link>
+              </li>
+              <li className='group transition-all'>
                 <div className='flex items-center cursor-pointer'>
-                  <Link href='/'>En</Link>
+                  <Link href='/' className='navLink'>
+                    En
+                  </Link>
                   <div>
                     <svg
                       xmlns='http://www.w3.org/2000/svg'
