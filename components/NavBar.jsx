@@ -5,8 +5,8 @@ import React, { useState } from 'react';
 const NavBar = () => {
   const [navShown, setNavShown] = useState(false);
   return (
-    <header className='border-b border-blackBasic/20 bg-green/10 py-4'>
-      <div className='container mx-auto flex justify-between items-center px-3 lg:px-0'>
+    <header className='border-b border-blackBasic/20 bg-green/10 py-2 md:py-3 2xl:py-4'>
+      <div className='container mx-auto flex justify-between items-center px-3 lg:px-5 2xl:px-0'>
         {/* Header Logo */}
         <Image
           src='/logo.png'
@@ -37,28 +37,8 @@ const NavBar = () => {
           </div>
         </div>
 
-        {/* Mobile menu */}
-        {/* {navShown && (
-          <nav className='absolute right-0 bg-primaryColor text-white h-full w-4/6'>
-            <ul className='flex flex-col items-center gap-3 py-3 lg:hidden'>
-              <li className='group transition-all'>
-                <Link href='/'>Home</Link>
-              </li>
-              <li className='group transition-all'>
-                <Link href='/'>Blog</Link>
-              </li>
-              <li className='group transition-all'>
-                <Link href='/'>About us</Link>
-              </li>
-              <li className='group transition-all'>
-                <Link href='/'>Login</Link>
-              </li>
-            </ul>
-          </nav>
-        )} */}
-
+        {/* Only show on large screen */}
         <div className=' hidden lg:flex items-center gap-[100px]'>
-          {/* Only show on large screen */}
           <nav>
             <ul className='flex items-center text-blackBasic transition-all gap-[70px] text-lg leading-9'>
               <li className='group transition-all'>

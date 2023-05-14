@@ -19,15 +19,15 @@ export default function Home() {
                 />
               </div>
 
-              <h1 className='font-merienda text-center lg:text-start font-bold text-5xl leading-[50px] lg:text-[65px] text-primaryColor lg:leading-[84px]'>
-                Order food online
+              <h1 className='font-merienda text-center lg:text-start font-bold text-5xl leading-[50px] lg:text-[60px] lg:leading-[74px] 2xl:text-[65px] text-primaryColor 2xl:leading-[84px]'>
+                Order food online&nbsp;
                 <br className='hidden lg:block' />
                 from your favourite
                 <br />
                 local restaurants
                 <span className='text-secondaryColor'>.</span>
               </h1>
-              <p className='text-gray text-xl  lg:text-2xl font-semibold lg:leading-8'>
+              <p className='text-gray text-xl lg:text-xl lg:leading-6 2xl:text-2xl font-semibold 2xl:leading-8'>
                 Freshly made food delivered to your door.
               </p>
               <div>
@@ -74,7 +74,7 @@ export default function Home() {
                 width={530}
                 height={530}
                 alt='Food recipe'
-                className='h-auto w-[300px] lg:w-[530px] lg:h-[530px]'
+                className='h-auto w-[300px] lg:w-[480px] 2xl:w-[530px] 2xl:h-[530px]'
               />
 
               {/* Total delivery */}
@@ -106,14 +106,14 @@ export default function Home() {
         </section>
 
         {/* Explore section */}
-        <section className='bg-secondaryColor/5 px-3 lg:px-0'>
+        <section className='bg-secondaryColor/5 px-3 lg:px-5 2xl:px-0'>
           <div className='container mx-auto space-y-4 lg:space-y-0 lg:grid lg:grid-cols-2 pt-[62px] pb-[37px] items-center'>
             {/* Left content */}
             <div>
               <h3 className='font-bold lg:text-[50px] text-4xl leading-[45px]  lg:leading-[65px] text-primaryColor'>
                 Explore your
                 <br />
-                favourite city’s food.
+                favourite city's food.
               </h3>
               <p className='lg:text-[18px] text-base leading-5 lg:leading-7 text-gray pt-[10px]'>
                 Lorem ipsum dolor sit amet consectetur. Ornare massa nunc
@@ -152,7 +152,7 @@ export default function Home() {
                   width={750}
                   height={500}
                   alt='Bg'
-                  className='w-[90vw] lg:w-[750px]'
+                  className='w-[90vw] 2xl:w-[750px]'
                 />
               </div>
 
