@@ -7,12 +7,30 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      fontFamily: {
+        merienda: ['Merienda', 'sans-serif'],
+      },
+      colors: {
+        primaryColor: '#396C03',
+        secondaryColor: '#FF8B00',
+        blackBasic: '#3F3F3F',
+        gray: '#676767',
+        light: '#C4C4C4',
+        light2: '#C7C7C7',
+        green: '#6B9142',
+      },
+      animation: {
+        goToRight: 'gtr 5s infinite',
+      },
+      keyframes: {
+        gtr: {
+          '0%': {},
+          '100%': {
+            transform: 'translateX(100%) translateY(-50%)',
+          },
+        },
       },
     },
   },
   plugins: [],
-}
+};
