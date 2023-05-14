@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <>
       <NavBar />
-      <main className=' bg-green/10 '>
+      <main className=' bg-green/10'>
         {/* Banner Section */}
         <section className='container mx-auto py-6 lg:py-24'>
           <div className='flex flex-col lg:flex-row items-center justify-center'>
@@ -93,7 +93,7 @@ export default function Home() {
               </div>
 
               {/* Blur Image */}
-              <div className='absolute -top-32 -right-16 lg:-top-44 lg:-right-6 -z-10'>
+              <div className='absolute -top-32 -right-8 md:-right-16 lg:-top-44 lg:-right-6 -z-10'>
                 <Image
                   src='/leaf1.png'
                   height={288}
@@ -162,7 +162,11 @@ export default function Home() {
                 width={456}
                 height={437}
                 alt='Delivery Boy'
-                className='absolute left-1/2 -translate-x-1/2 lg:animate-goToRight duration-1000 infinite ease-linear  top-1/2 mt-5 -translate-y-1/2 lg:-left-36'
+                className='absolute left-1/2 -translate-x-1/2 
+                // lg:animate-goToRight duration-1000 infinite ease-linear  
+                // lg:-left-36
+                top-1/2 mt-5 -translate-y-1/2 
+                '
               />
             </div>
           </div>
